@@ -1,9 +1,12 @@
 {
-  "schemaVersion": 1,
   "repository": "neophilism/UBC-Debates",
-  "roadmapVersion": 1,
+  "title": "UBC-Debates",
   "planVerified": false,
   "plannedPrCount": 0,
+  "verificationNeeded": "Empty repository; no approved enumerated PR plan is present.",
+  "sourceFiles": [],
+  "schemaVersion": 1,
+  "roadmapVersion": 1,
   "observedAt": "2026-10-11T17:41:51.980Z",
   "units": [],
   "pullRequests": []
