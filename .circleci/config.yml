@@ -1,0 +1,22 @@
+version: 2.1
+
+# Current source scope is a roadmap, docs and security-status integrity.
+# A full debates product CI must be added after substantive source exists.
+jobs:
+  current-evidence-integrity:
+    docker:
+      - image: cimg/python:3.12
+    resource_class: small
+    steps:
+      - checkout
+      - run:
+          name: E2EESA status-file integrity, not security certification
+          command: python3 scripts/validate_e2eesa_status.py
+      - run:
+          name: Check roadmap and PR registry parse
+          command: |
+            python3 -c 'import json; [json.load(open(p)) for p in ["registry/prs.json", "registry/roadmap.json"]]'
+workflows:
+  current-scope-only:
+    jobs:
+      - current-evidence-integrity
