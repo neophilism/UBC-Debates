@@ -1,13 +1,211 @@
 {
   "repository": "neophilism/UBC-Debates",
-  "title": "UBC-Debates",
-  "planVerified": false,
-  "plannedPrCount": 0,
-  "verificationNeeded": "Empty repository; no approved enumerated PR plan is present.",
-  "sourceFiles": [],
+  "title": "UBC-Debates canonical PR development plan",
   "schemaVersion": 1,
-  "roadmapVersion": 1,
-  "observedAt": "2026-10-11T17:41:51.980Z",
-  "units": [],
-  "pullRequests": []
+  "roadmapVersion": 2,
+  "observedAt": "2026-10-19T01:30:50.165Z",
+  "planVerified": true,
+  "plannedPrCount": 8,
+  "sourceFiles": [
+    "README.md",
+    "docs/E2EESA_ADOPTION.md",
+    "AGENTS.md"
+  ],
+  "units": [
+    {
+      "id": "UBC-01",
+      "title": "Define branded thin application boundary, routes and component contracts",
+      "prs": [],
+      "contributingPrs": [
+        3,
+        4
+      ],
+      "dependsOn": [],
+      "acceptanceCriteria": "Document versioned dependency and source/build boundaries; compile a minimal app without copying the debate engine.",
+      "sourceMetadata": {
+        "sourceFiles": [
+          "README.md",
+          "docs/E2EESA_ADOPTION.md",
+          "security/e2eesa-status.json"
+        ],
+        "planScope": "Thin branded client of neophilism/Live-Debate-Engine"
+      }
+    },
+    {
+      "id": "UBC-02",
+      "title": "Build responsive branded debate experience",
+      "prs": [],
+      "dependsOn": [
+        "UBC-01"
+      ],
+      "acceptanceCriteria": "Render program, debates, speakers, and participant navigation with accessible loading and failure states.",
+      "sourceMetadata": {
+        "sourceFiles": [
+          "README.md",
+          "docs/E2EESA_ADOPTION.md",
+          "security/e2eesa-status.json"
+        ],
+        "planScope": "Thin branded client of neophilism/Live-Debate-Engine"
+      }
+    },
+    {
+      "id": "UBC-03",
+      "title": "Integrate versioned Live Debate Engine API",
+      "prs": [],
+      "dependsOn": [
+        "UBC-01"
+      ],
+      "acceptanceCriteria": "Exercise authenticated, explicitly scoped debate engine contracts; missing upstream readiness must yield a truthful disabled state.",
+      "sourceMetadata": {
+        "sourceFiles": [
+          "README.md",
+          "docs/E2EESA_ADOPTION.md",
+          "security/e2eesa-status.json"
+        ],
+        "planScope": "Thin branded client of neophilism/Live-Debate-Engine"
+      }
+    },
+    {
+      "id": "UBC-04",
+      "title": "Connect application identity, admission and participant permissions",
+      "prs": [],
+      "dependsOn": [
+        "UBC-03"
+      ],
+      "acceptanceCriteria": "Enforce roles server-side, separate public debates from protected participant data, test denial and logout.",
+      "sourceMetadata": {
+        "sourceFiles": [
+          "README.md",
+          "docs/E2EESA_ADOPTION.md",
+          "security/e2eesa-status.json"
+        ],
+        "planScope": "Thin branded client of neophilism/Live-Debate-Engine"
+      }
+    },
+    {
+      "id": "UBC-05",
+      "title": "Ship accessible playback and live debate controls",
+      "prs": [],
+      "dependsOn": [
+        "UBC-02",
+        "UBC-03"
+      ],
+      "acceptanceCriteria": "Verify keyboard, screen reader, captions, reconnect and denial states in browsers.",
+      "sourceMetadata": {
+        "sourceFiles": [
+          "README.md",
+          "docs/E2EESA_ADOPTION.md",
+          "security/e2eesa-status.json"
+        ],
+        "planScope": "Thin branded client of neophilism/Live-Debate-Engine"
+      }
+    },
+    {
+      "id": "UBC-06",
+      "title": "Implement required security controls and end-to-end evidence",
+      "prs": [],
+      "contributingPrs": [
+        1,
+        2
+      ],
+      "dependsOn": [
+        "UBC-04",
+        "UBC-05"
+      ],
+      "acceptanceCriteria": "Verify actual data flow scopes and applicable security tests; keep independent external expert review pending.",
+      "sourceMetadata": {
+        "sourceFiles": [
+          "README.md",
+          "docs/E2EESA_ADOPTION.md",
+          "security/e2eesa-status.json"
+        ],
+        "planScope": "Thin branded client of neophilism/Live-Debate-Engine"
+      }
+    },
+    {
+      "id": "UBC-07",
+      "title": "Add CI, runtime diagnostics and deployment qualification",
+      "prs": [],
+      "dependsOn": [
+        "UBC-02",
+        "UBC-06"
+      ],
+      "acceptanceCriteria": "Require exact-head unit/integration/negative tests, genuine engine readiness and accessible deployment checks.",
+      "sourceMetadata": {
+        "sourceFiles": [
+          "README.md",
+          "docs/E2EESA_ADOPTION.md",
+          "security/e2eesa-status.json"
+        ],
+        "planScope": "Thin branded client of neophilism/Live-Debate-Engine"
+      }
+    },
+    {
+      "id": "UBC-08",
+      "title": "Finish operational release and acceptance evidence",
+      "prs": [],
+      "dependsOn": [
+        "UBC-07"
+      ],
+      "acceptanceCriteria": "Record release commit, independent evidence, real upstream integration, monitoring, and unresolved prelaunch gates.",
+      "sourceMetadata": {
+        "sourceFiles": [
+          "README.md",
+          "docs/E2EESA_ADOPTION.md",
+          "security/e2eesa-status.json"
+        ],
+        "planScope": "Thin branded client of neophilism/Live-Debate-Engine"
+      }
+    }
+  ],
+  "pullRequests": [
+    {
+      "id": 1,
+      "number": 1,
+      "title": "Track E2EESA implementation, full testing and independent expert review",
+      "state": "closed",
+      "url": "https://github.com/neophilism/UBC-Debates/pull/1",
+      "createdAt": "2026-10-12T13:53:36Z",
+      "updatedAt": "2026-10-12T14:20:25Z",
+      "mergedAt": "2026-10-12T14:20:25Z",
+      "closedAt": "2026-10-12T14:20:25Z",
+      "draft": false
+    },
+    {
+      "id": 2,
+      "number": 2,
+      "title": "Owner policy: proceed with AI security review; defer external audit",
+      "state": "closed",
+      "url": "https://github.com/neophilism/UBC-Debates/pull/2",
+      "createdAt": "2026-10-13T19:06:05Z",
+      "updatedAt": "2026-10-13T19:23:27Z",
+      "mergedAt": "2026-10-13T19:23:26Z",
+      "closedAt": "2026-10-13T19:23:26Z",
+      "draft": false
+    },
+    {
+      "id": 3,
+      "number": 3,
+      "title": "Standardize canonical PR registry for Boardroom and Engine Room",
+      "state": "closed",
+      "url": "https://github.com/neophilism/UBC-Debates/pull/3",
+      "createdAt": "2026-10-13T19:50:54Z",
+      "updatedAt": "2026-10-16T15:24:29Z",
+      "mergedAt": "2026-10-16T15:24:29Z",
+      "closedAt": "2026-10-16T15:24:29Z",
+      "draft": false
+    },
+    {
+      "id": 4,
+      "number": 4,
+      "title": "Run owner-policy and project-source integrity checks on every PR",
+      "state": "closed",
+      "url": "https://github.com/neophilism/UBC-Debates/pull/4",
+      "createdAt": "2026-10-13T20:26:09Z",
+      "updatedAt": "2026-10-13T20:27:20Z",
+      "mergedAt": "2026-10-13T20:27:20Z",
+      "closedAt": "2026-10-13T20:27:20Z",
+      "draft": false
+    }
+  ]
 }
