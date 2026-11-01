@@ -1,0 +1,21 @@
+:root { color-scheme: light; font-family: system-ui, sans-serif; color: #152c43; background: #f8f6f0; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; }
+a { color: #174f79; text-underline-offset: .25em; }
+a:focus-visible, h1:focus-visible, main:focus-visible { outline: 3px solid #9b5209; outline-offset: 5px; }
+.skip { position: absolute; top: -5rem; left: 1rem; padding: .8rem; background: white; z-index: 1; }
+.skip:focus { top: 1rem; }
+header { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: 1.5rem clamp(1rem, 5vw, 5rem); border-bottom: 1px solid #ced4d6; flex-wrap: wrap; }
+.brand { color: #152c43; text-decoration: none; font-size: 1.5rem; font-weight: 800; letter-spacing: -.04em; }
+.brand span { font-weight: 400; }
+nav { display: flex; flex-wrap: wrap; gap: 1.1rem; }
+nav a { font-size: .95rem; padding: .4rem 0; text-decoration: none; }
+nav a[aria-current] { font-weight: 750; border-bottom: 2px solid #174f79; }
+main { max-width: 68rem; padding: clamp(3rem, 9vw, 7rem) 1.5rem; margin: auto; }
+.eyebrow { font-size: .8rem; text-transform: uppercase; letter-spacing: .15em; color: #5c5443; }
+h1 { font: 500 clamp(2.4rem, 6vw, 5rem)/1.06 Georgia, serif; max-width: 13ch; margin: 1.2rem 0; }
+.intro { font-size: 1.2rem; max-width: 38rem; line-height: 1.65; }
+.notice { max-width: 42rem; margin-top: 3rem; border-left: 3px solid #a17c31; padding: .4rem 1.3rem; background: #efede4; line-height: 1.6; }
+.status { font-weight: 750; }
+footer { padding: 2rem clamp(1rem, 5vw, 5rem); border-top: 1px solid #ced4d6; font-size: .85rem; }
+@media (max-width: 38rem) { header { align-items: flex-start; gap: 1rem; } nav { gap: .6rem 1rem; } main { padding-top: 3rem; } }
